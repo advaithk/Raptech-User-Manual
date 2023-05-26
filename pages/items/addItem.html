@@ -1,0 +1,100 @@
+<body>
+
+	<div class="insideTipsDataContainer">
+		<div class="tipsBackButton" module="items"><i class="icon-left_line_arrow"></i> Back </div>
+		<div class="userManualModuleHeader">Create Items - Tips</div>
+		<div class="faqSubHeader">What is the Item Module?</div>
+		<div class="userManualTextData">
+			<p>
+				<b>Raptech</b> allows users to manage all items that are purchased, manufactured, sold, or kept in inventory. Services can also be defined as items, but they are only relevant for sales.
+				Enter the data for each item that will be used for Purchasing, Sales, Production, Warehousing, Accounting, and Services. The Item tab is where you add, update, search for, and manage your item data. This item tab contains a list of all the items in the company.
+				<br><br>
+				<b>Pre-requisites</b>: Some prerequisites are required as a prior condition and should be added by Admin Users under admin settings, such as <b>UOM, Category, Ledger accounts of Purchase and Sales and Additional fields (if required).</b>
+				<div class="faqSubHeader">What steps do I take to create an item?</div>
+				To successfully create an Item, follow these steps:
+			</p>
+			
+			<ol>
+				<li><b>Items</b> sub-module should be chosen under the Item module.<br> In search mode, the Items tab appears. Switch to the <b>create</b> mode.</li>
+				<li>Fill in the necessary info under each of the following tabs: <br>(Fields marked with an asterisk (<span style="color: red">*</span>) are required, and mandatory.)
+					<ol>
+						<li>
+							<b>Primary Details</b>
+							<ul>
+								<li>Choose the Business Unit (Entity)</li>
+								<li>Choose the Item Type Information. These are the details of each type of item:
+									<ol>
+										<li><b>Asset - Movable Item: </b>Movable assets are assets that can be moved from one location to another.</li>
+										<li><b>Asset - Immovable Item: </b>: Immovable assets are assets that are usually attached to and essential to the function of the building.</li>
+										<li><b>Consumable Item: </b>Consumables (also known as non-durable items or soft goods) are items that are intended to be consumed.</li>
+										<li><b>Raw Material Item: </b>Raw Materials are the goods or inventory required by a company to manufacture its products.</li>
+										<li><b>Trading/Semi Finished Goods Item: </b>Semi-finished goods are partially finished goods that are used as inputs in the production of other goods, including finished goods.</li>
+										<li><b>Trading/Finished Goods Item: </b>Finished goods are items that have completed the manufacturing process.</li>
+										<li><b>Trading Item - Batch: </b>A batch item is one that involves keeping track of items that have unique numbers and characteristics but have been grouped together, such as pharmaceuticals.</li>
+										<li><b>Trading Item - Serial No: </b>The Item is a unique identifier assigned incrementally or sequentially to uniquely identify it. The items will be assigned a single serial or batch number.</li>
+										<li><b>Trading Item - Serial No. Split: </b>The items are uniquely identified by a unique identifier assigned incrementally or sequentially. The items will be individually marked into different serial or batch numbers.</li>
+										<li><b>Scrap Item: </b>Scrap Items are items that have no usable life in their current condition but are sellable for scrap value in accordance with the provisions set forth.</li>
+										<li><b>Service Item: </b>A service item is used for services that a company either charges a customer for or purchases from a vendor.</li>											
+									</ol>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<b>Item Details</b>
+							<ul>
+								<li>If the <b>Item No.</b> is a manual entry, enter it here.</li>
+								<li>Enter the <b>Item Description.</b></li>
+								<li>If necessary, enter an Additional Description of the item.</li>
+								<li>Provide the item's <b>UOM.</b></li>
+								<li>If the item has multiple UOMs, uncheck <b>the alternate UOM</b> check box and enter the alternate UOM details.</li>
+								<li>If available, enter the <b>Manufacturer</b> and <b>Manufacturer Part No.</b></li>
+								<li>If required, select the <b>Category</b> in which the item falls.</li>
+								<li>Upload the item's image.</li>
+							</ul>
+						</li>
+						<li>
+							<b>Purchase Related Details</b>
+							<ul>
+								<li>Enter the <b>Minimum Order Qty</b> value to receive an alert message when the item value is reached in the inventory.</li>
+								<li>When the item reaches the minimum level, select the <b>Criticality type</b> required.</li>
+								<li>Select the <b>GRN Inspection Required</b> check box if the item needs to be inspected while being received from vendors.</li>
+								<li>If required, select the category under which the item belongs.</li>
+								<li>Enter the Barcode details.</li>
+								<li>If required, enter the item's <b>expiry days</b>.</li>
+								<li>If necessary, select the <b>catch weight</b> check box and enter the item's <b>nominal weight</b>.</li>
+								<li>Select the item <b>issue method</b> from the drop-down list.</li>
+
+							</ul>
+						</li>
+						<li>
+							<b>Finance Details</b>
+							<ul>
+								<li>Enter the item's <b>HSN/SAC code</b>.</li>
+								<li>Enter the <b>CESS</b> details if required.</li>
+								<li>Select <b>Purchase</b> and <b>Sales Accounts</b> codes to which the item should be linked.</li>								</ul>
+						</li>
+						<li>
+							<b>Depreciation Details</b>
+							<ul>
+								<li>For the Asset items, enter the depreciation details such as <b>Depreciation Method, Depreciation Based on, Useful Life, Salvage Value, Depreciation Percentage, Depreciation Frequency, Depreciation Expense Account, and Accumulated Depreciation Account</b>.</li>
+							</ul>
+						</li>
+						<li>
+							<b>Scrap Item</b>
+							<ul>
+								<li>If it is a scrap item, enter the scrap value.</li>
+							</ul>
+						</li>
+					</ol>				
+				</li>
+				<li>After you've filled out all of the details, click <b>Create</b>.</li>
+			</ol>
+		</div>		
+	</div>
+</body>
+
+<script>
+	 $('.tipsBackButton').click(function() {
+		$('#tipsDataContainer').load('../helpfiles/pages/items/viewItems.html');
+	});
+</script>

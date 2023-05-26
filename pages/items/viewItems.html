@@ -1,0 +1,45 @@
+
+<body>
+	<div class="pageTipsLinks">
+		<div class="dataHeading"><b>What can we do with the item module?</b></div>
+		<div class="pageTipsFaqLinks">
+			<ol>
+				<li id="faqItem_1" class="faqLinks" htmlfile="/items/addItem.html">Create Items</li>
+				<li id="faqItem_2" class="faqLinks" htmlfile="/items/editItem.html">Edit Items</li>
+				<li id="faqItem_3" class="faqLinks" htmlfile="">Item Details</li>
+				<li id="faqItem_4" class="faqLinks" htmlfile="">Import Bulk Items</li>
+				<li id="faqItem_5" class="faqLinks" htmlfile="">Export Bulk Items</li>
+				<li id="faqItem_6" class="faqLinks" htmlfile="">Inactivate Items</li>
+				<li id="faqItem_6" class="faqLinks" htmlfile="">Link Item to Entity</li>
+			</ol>
+		</div>
+		<span class="dataHeading"><b>Help documents</b></span> &nbsp;(opens user manual in a new tab)
+		<div class="pageTipsDocLinks">
+			<ol>
+				<li id="docLink_1" class="docLinks" anchortag="#_Toc135260286">Items Module</li>
+				<li id="docLink_2" class="docLinks" anchortag="#_Toc135260287">Items Sub-tab</li>
+				<li id="docLink_3" class="docLinks" anchortag="#_Toc135260288">Add Item</li>
+				<li id="docLink_4" class="docLinks" anchortag="#_Toc135260289">Price Lists</li>
+			</ol>
+		</div>
+	</div>
+</body>
+
+
+<script>
+	$(document).ready(function(){
+	    $('.faqLinks').click(function() {
+			var htmlFile = $(this).attr("htmlfile");
+			if(htmlFile) {
+				$('#tipsDataContainer').load('../helpfiles/pages' + htmlFile);
+			}			
+		});
+		$('.docLinks').click(function() {
+			var message = $(this).attr("anchortag");
+			var newTab = window.open("../helpfiles/story.html"); 	// Open the new tab
+			newTab.addEventListener("load", function() {
+				newTab.postMessage(message, "*");					// Send the message to the new tab
+			});
+		});
+	});	
+</script>

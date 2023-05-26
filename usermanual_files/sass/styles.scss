@@ -1,0 +1,107 @@
+/* User Manual - Styles */
+
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+#toc {
+	display: flex;
+	flex: 0 0 22%;
+	flex-direction: column;
+	background-color: #f5f5f5;
+	padding: 20px;
+	overflow: auto;
+
+	.logoContainer {
+		display: inherit;
+		justify-content: flex-start;
+		align-content: center;
+		flex-wrap: wrap;
+		max-width: inherit;
+		padding-top: 10px;		
+		#logoImage {
+			max-height: 100%;
+			width: 50%;
+			max-width: 100%;
+		}
+	}
+	.lineContainer {
+		display: inherit;
+		justify-content: flex-start;
+		align-content: center;
+		flex-wrap: wrap;
+		padding-top: 10px;
+		.horLine {
+			height: 2px; 
+			width: 50%;
+			margin: 10px 0px;
+		}
+	}	
+
+	.helpContents {
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
+
+	a {
+		text-decoration: none;
+		color: #333;
+		&:hover {
+			color: #248DCD;
+		}
+	}
+
+	ol {
+		padding-inline-start: 20px;
+		li {
+			ul {
+				li {
+					&:first-child {
+						padding-top: 10px;
+					}
+					ul {
+						padding-left: 20px !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+#content {
+	flex: 1;
+	padding: 20px;
+	overflow: none;
+}
+@media screen and (max-width: 768px) {
+	body {
+		flex-direction: column;
+	}
+	#toc {
+		flex: 0 0 auto;
+	}
+	#content {
+		flex: 1;
+	}
+}
+.userManualHeading {
+	margin-bottom: 5px;
+	font-size: 20px;
+	text-align: left;
+}
